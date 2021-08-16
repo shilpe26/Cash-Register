@@ -1,0 +1,81 @@
+*{
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background: linear-gradient(to bottom, #B85C38, #E0C097); */
+    /* background-color: #9E7777; */
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    /* width: 98vw; */
+    border: 5px solid #5C3D2E;
+    /* margin-top: 15px; */
+    /* height: 550px; */
+    width: 50%;
+    height: 565px;
+    background: linear-gradient(to right top, #B85C38, #E0C097);
+}
+.heading{
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    width: auto;
+    justify-content: center;
+    color: #2D2424;
+}
+.description{
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    height: 40px;
+}
+label{
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 5px;
+}
+input{
+    width: 25%;
+    height: 25px;
+}
+#check-btn{
+    margin-top: 15px;
+    width: 15%;
+    height: 35px;
+    border: 3px solid #FDE49C;
+    background: linear-gradient(to bottom, #FDE49C, #E0C097);
+}
+#check-btn:hover{
+    background-color: #753422;
+}
+caption{
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 20px;
+    color: #2D2424;
+}
+/* #error-message{
+    width: 25%;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #F5E79D;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    background: linear-gradient(to right, #FDE49C, #E0C097, #F5E79D);
+} */
+table{
+    margin-bottom: 10px;
+}
+th{
+    float: left;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+}
+td{
+    padding: 20px;
+    border: 1px solid black;
+}
+/* table tr{
+    border: 1px solid black;
+} */
