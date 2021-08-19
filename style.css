@@ -3,7 +3,7 @@ body {
     padding: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: lightgray;
-    background: url("img/bg.jpg");
+    background: url("bg.jpg");
     background-size: contain;
     color: #C400FF;
 }
