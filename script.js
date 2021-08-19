@@ -1,37 +1,45 @@
-const billAmount = document.querySelector('#bill-amount');
-const cashGiven = document.querySelector('#cash-given');
-const checkButton = document.querySelector('#check-btn');
-const message = document.querySelector('#error-message');
-const nextBtn = document.querySelector('#next-btn');
+const billAmount = document.querySelector("#bill_amount");
+const cashGiven = document.querySelector("#cash_given");
+const nextBtn = document.querySelector("#next");
+const checkBtn = document.querySelector("#check");
+const message = document.querySelector("#error_msg");
 const noOfNotes = document.querySelectorAll('.number-of-notes');
 const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
-nextBtn.addEventListener('click', validateBillAndCashAmount);
-
-checkButton.addEventListener('click', function validateBillAndCashAmount() {
-    hideMessage();
-    if (billAmount.value > 0) {
-        if (cashGiven.value >= billAmount.value) {
-            const amountToBeReturned = cashGiven.value - billAmount.value;
-            calculateChange(amountToBeReturned);
-        } else {
-            showMessage("Do you wanna wash plates?");
-        }
+nextBtn.addEventListener("click", function hideShow() {
+    if (billAmount.value === '') {
+        showMessage("Please Fill the Bill Amount");
     } else {
-        showMessage("Invalid Bill Amount");
+        hideMessage();
+        document.querySelector(".hide").style.display = "block";
+        document.querySelector("#check").style.display = "block";
     }
-    document.querySelector('#error-message').style.cssText = `width: 25%;
-    height: 30px;
-    text-align: center;
-    border: 1px solid #F5E79D;
-    border-radius: 5px;
-    padding: 5px;
-    margin-top: 10px;
-    background: linear-gradient(to right, #FDE49C, #E0C097, #F5E79D);`;
+});
+
+checkBtn.addEventListener('click', function validateBillAndCashAmount() {
+    hideMessage();
+    if (billAmount.value === '' || cashGiven.value === '') {
+        showMessage("Please Fill the Both Amounts");
+    } else {
+        hideMessage();
+        document.querySelector("table").style.display = "block";
+
+        if (billAmount.value > 0) {
+            if (cashGiven.value >= billAmount.value) {
+                const amountToBeReturned = cashGiven.value - billAmount.value;
+                calculateChange(amountToBeReturned);
+            } else {
+                showMessage("Do you wanna wash plates?");
+            }
+        } else {
+            showMessage("Invalid Bill Amount");
+        }
+    }
+
 });
 
 function calculateChange(amountToBeReturned) {
-    
+
     //available notes
     for (let i = 0; i < availableNotes.length; i++) {
         //no of notes needed for the deomination
